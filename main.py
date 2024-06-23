@@ -1,9 +1,11 @@
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import torch
+from typing import List, Dict
 
 class InputData(BaseModel):
-    values: list[int]
+    values: list[float]
 
 app = FastAPI()
 
@@ -14,8 +16,8 @@ ts = torch.jit.load('./doubleit_model.pt')
 def index():
     return {'message': 'This model returns a 1-dim tensor multiplied by 2'}
 
-@app.post("/infer")
-async def infer(data: InputData):
+@app.post("/infer", response_model=Dict[str, List[float]])
+async def infer(data: InputData) -> Dict[str, List[float]]:
     """
     Endpoint to perform inference using the pre-trained model.
 
