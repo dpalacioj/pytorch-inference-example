@@ -1,0 +1,14 @@
+# Ignore cache directories
+__pycache__
+.pytest_cache
+aws
+workera
+
+# Ignore files with the following extensions
+*.docx
+*.doc
+*.pdf
+*.zip
+
+# Optionally ignore the .gitignore file
+# .gitignore

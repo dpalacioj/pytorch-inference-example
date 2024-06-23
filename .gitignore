@@ -163,6 +163,7 @@ cython_debug/
 
 # Ignore everything in the "workera" directory
 workera/
+aws/
 
 # Ignore PDF files
 *.pdf
@@ -170,3 +171,6 @@ workera/
 # Ignore DOC files
 *.doc
 *.docx
+
+# Ignore ZIP files
+*.zip
