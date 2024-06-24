@@ -176,4 +176,5 @@ aws/
 *.zip
 Dockerfile copy
 main copy.py
-.github/workflows/aws-main.yaml
+.github/workflows/aws-ci-cd.yaml
+oldInstructions.md
