@@ -10,5 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire current directory into the working directory of the container
 COPY . .
 
-# Default command to run the Uvicorn server
+# 
 CMD ["main.handler"]
