@@ -174,3 +174,6 @@ aws/
 
 # Ignore ZIP files
 *.zip
+Dockerfile copy
+main copy.py
+.github/workflows/aws_copy.yaml

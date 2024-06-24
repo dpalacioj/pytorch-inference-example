@@ -3,6 +3,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import torch
 from typing import List, Dict
+from mangum import Mangum
 
 class InputData(BaseModel):
     values: list[float]
@@ -38,3 +39,5 @@ async def infer(data: InputData) -> Dict[str, List[float]]:
         return {"result": result.tolist()}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+handler = Mangum(app)
